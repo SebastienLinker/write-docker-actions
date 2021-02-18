@@ -5,4 +5,6 @@ COPY . .
 RUN go get -d -v ./...
 RUN go install -v ./...
 CMD ["hello"]
+RUN echo "INPUT_GITTOKEN: ${INPUT_FIRSTGREETING}"
 RUN echo "INPUT_GITTOKEN: $INPUT_FIRSTGREETING"
+RUN echo "INPUT_GITTOKEN: ${firstGreeting}"
