@@ -36,6 +36,7 @@ jobs:
           docker image rm pr_test
         env:
           firstGreeting: ${{env.GITTOKEN}}
+          GITTOKEN: ${{env.GITTOKEN}}
 
       # - name: create-issue
       #   uses: ./.github/actions/issue-maker
