@@ -32,7 +32,7 @@ jobs:
 
       - name: docker meow
         run: |
-          docker build -t pr_test .github/actions/cat-facts/Dockerfile
+          docker build -t pr_test .github/actions/cat-facts/
           docker image rm pr_test
         env:
           firstGreeting: ${{env.GITTOKEN}}
