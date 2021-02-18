@@ -22,7 +22,7 @@ jobs:
       - name: hello-action
         uses: ./.github/actions/hello-world
         with:
-          firstGreeting: ${{GITTOKEN}}
+          firstGreeting: ${{env.GITTOKEN}}
       
       # - name: meow
       #   uses: ./.github/actions/cat-facts
