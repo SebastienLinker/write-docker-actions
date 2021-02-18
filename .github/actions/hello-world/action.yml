@@ -20,12 +20,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-
-jobs:
-  action:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Show git info
-        run: |
-          echo "GITTOKEN: $GITTOKEN"
