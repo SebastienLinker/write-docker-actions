@@ -1,6 +1,7 @@
 import requests
 import random
 import sys
+import os
 
 # Make an HTTP GET request to the cat-fact API
 cat_url = "https://cat-fact.herokuapp.com/facts"
@@ -27,3 +28,5 @@ print(random_fact)
 
 # Set the fact-output of the action as the value of random_fact
 print(f"::set-output name=fact::{random_fact}")
+
+print(os.environ.get('INPUT_FIRSTGREETING'))
