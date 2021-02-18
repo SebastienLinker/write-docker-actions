@@ -13,4 +13,4 @@ RUN chmod +x entrypoint.sh
 RUN ./entrypoint.sh
 
 # CMD [ "python", "/src/main.py" ]
-CMD ["/bin/sh", "entrypoint.sh"]
+CMD ["/bin/sh", "/entrypoint.sh"]
