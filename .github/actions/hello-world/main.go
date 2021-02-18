@@ -10,11 +10,12 @@ func main() {
 // Access Inputs as environment vars
 firstGreeting := os.Getenv("INPUT_FIRSTGREETING")
 os.Setenv("GITTOKEN", firstGreeting)
-fmt.Println("Token: " + os.Getenv("GITTOKEN")
+token := os.Getenv("GITTOKEN")
 secondGreeting := os.Getenv("INPUT_SECONDGREETING")
 thirdGreeting := os.Getenv("INPUT_THIRDGREETING")
 
 // Use those inputs in the actions logic
+fmt.Println("Token: " + token)
 fmt.Println("Hello " + firstGreeting)
 fmt.Println("Hello " + secondGreeting)
 
