@@ -6,8 +6,7 @@ name: Docker Actions
 on: [push, ]
 
 env:
-  GITTOKEN:  ${{secrets.GITHUB_TOKEN}}
-
+  GITTOKEN: "RandomText"
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   action:
