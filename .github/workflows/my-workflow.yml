@@ -19,14 +19,16 @@ jobs:
         run: |
           echo "GITTOKEN: $GITTOKEN"
 
-      - name: hello-action
-        uses: ./.github/actions/hello-world
+      # - name: hello-action
+      #   uses: ./.github/actions/hello-world
+      #   with:
+      #     firstGreeting: ${{env.GITTOKEN}}
+      
+      - name: meow
+        uses: ./.github/actions/cat-facts
+        id: cat
         with:
           firstGreeting: ${{env.GITTOKEN}}
-      
-      # - name: meow
-      #   uses: ./.github/actions/cat-facts
-      #   id: cat
 
       # - name: create-issue
       #   uses: ./.github/actions/issue-maker
