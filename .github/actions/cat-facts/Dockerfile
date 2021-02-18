@@ -6,7 +6,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV GITTOKEN=${GITTOKEN}
+ARG GITTOKEN
 RUN python src/main.py
 RUN echo "INPUT_GITTOKEN: ${GITTOKEN}"
 RUN echo "INPUT_GITTOKEN: $GITTOKEN"
