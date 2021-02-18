@@ -5,3 +5,5 @@
 sh -c "echo $*"
 sh -c "echo $GITTOKEN"
 sh -c "echo $INPUT_FIRSTGREETING"
+
+python src/main.py
