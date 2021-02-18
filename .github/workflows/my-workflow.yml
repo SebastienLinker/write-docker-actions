@@ -35,7 +35,6 @@ jobs:
           docker build -t PR_test .github/actions/cat-facts ./Dockerfile
         env:
           firstGreeting: ${{env.GITTOKEN}}
-          GITTOKEN: ${{ inputs.firstGreeting }}
 
       # - name: create-issue
       #   uses: ./.github/actions/issue-maker
