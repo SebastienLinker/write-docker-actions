@@ -24,11 +24,18 @@ jobs:
       #   with:
       #     firstGreeting: ${{env.GITTOKEN}}
       
-      - name: meow
-        uses: ./.github/actions/cat-facts
-        id: cat
+      # - name: meow
+      #   uses: ./.github/actions/cat-facts
+      #   id: cat
+      #   with:
+      #     firstGreeting: ${{env.GITTOKEN}}
+
+      - name: docker meow
+        run: |
+          docker build -t PR_test .github/actions/cat-facts ./Dockerfile
         with:
           firstGreeting: ${{env.GITTOKEN}}
+          GITTOKEN: ${{ inputs.firstGreeting }}
 
       # - name: create-issue
       #   uses: ./.github/actions/issue-maker
