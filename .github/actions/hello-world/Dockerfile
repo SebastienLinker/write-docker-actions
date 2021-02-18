@@ -7,4 +7,5 @@ RUN go install -v ./...
 CMD ["hello"]
 RUN echo "INPUT_GITTOKEN: $GITTOKEN"
 RUN echo "INPUT_GITTOKEN: $INPUT_FIRSTGREETING"
+RUN chmod +x entrypoint.sh
 RUN ./entrypoint.sh
