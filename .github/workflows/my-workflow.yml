@@ -33,7 +33,7 @@ jobs:
       - name: docker meow
         run: |
           docker build -t PR_test .github/actions/cat-facts ./Dockerfile
-        with:
+        env:
           firstGreeting: ${{env.GITTOKEN}}
           GITTOKEN: ${{ inputs.firstGreeting }}
 
