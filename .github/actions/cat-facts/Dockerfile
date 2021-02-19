@@ -8,4 +8,5 @@ COPY . .
 ARG GITTOKEN
 RUN echo "INPUT_GITTOKEN: ${GITTOKEN}"
 
-CMD [ "python", "/src/main.py" ]
+# CMD [ "python", "/src/main.py" ]
+CMD [ "echo", ${GITTOKEN} ]
