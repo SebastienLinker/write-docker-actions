@@ -17,5 +17,6 @@ RUN chmod +x entrypoint.sh
 RUN ./entrypoint.sh
 RUN pwd
 
+WORKDIR /
 # CMD [ "python", "/src/main.py" ]
 CMD [ "pwd" ]
