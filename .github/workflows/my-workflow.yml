@@ -5,6 +5,9 @@ name: Docker Actions
 # Controls when the action will run. 
 on: [push, pull_request]
 
+env:
+  GITTOKEN: "RandomText"
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   action:
@@ -19,6 +22,8 @@ jobs:
       - name: meow
         uses: ./.github/actions/cat-facts
         id: cat
+        with:
+          GITTOKEN: ${{env.GITTOKEN}}
 
       # - name: create-issue
       #   uses: ./.github/actions/issue-maker
