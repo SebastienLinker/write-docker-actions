@@ -26,7 +26,7 @@ random_fact = select_random_fact(fact_list)
 # Print the individual randomly returned cat-fact
 print(random_fact)
 
-print(f'Token is {os.environ.get('GITTOKEN')}')
+print(f'Token is {os.environ.get("GITTOKEN")}')
 
 # Set the fact-output of the action as the value of random_fact
 print(f"::set-output name=fact::{random_fact}")
