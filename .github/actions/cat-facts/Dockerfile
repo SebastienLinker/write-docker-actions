@@ -10,4 +10,4 @@ RUN echo "INPUT_GITTOKEN: ${GITTOKEN}"
 RUN chmod +x test.sh
 
 # CMD [ "python", "/src/main.py" ]
-CMD [ "/bin/sh", "test.sh" ]
+CMD [ "/bin/sh", "/test.sh" ]
