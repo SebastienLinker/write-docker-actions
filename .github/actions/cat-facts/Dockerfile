@@ -4,7 +4,7 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./github/actions/cat-facts/ ./
+COPY ./.github/actions/cat-facts/ ./
 
 ARG GITTOKEN
 ARG GITHUB_SHA
