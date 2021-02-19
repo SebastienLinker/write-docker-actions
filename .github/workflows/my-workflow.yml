@@ -24,19 +24,19 @@ jobs:
       #   with:
       #     firstGreeting: ${{env.GITTOKEN}}
       
-      # - name: meow
-      #   uses: ./.github/actions/cat-facts
-      #   id: cat
-      #   with:
-      #     firstGreeting: ${{env.GITTOKEN}}
-
-      - name: docker meow
-        run: |
-          docker build --build-arg GITTOKEN=${{env.GITTOKEN}} -t pr_test .github/actions/cat-facts/
-          docker image rm pr_test
-        env:
+      - name: meow
+        uses: ./.github/actions/cat-facts
+        id: cat
+        with:
           firstGreeting: ${{env.GITTOKEN}}
-          GITTOKEN: ${{env.GITTOKEN}}
+
+      # - name: docker meow
+      #   run: |
+      #     docker build --build-arg GITTOKEN=${{env.GITTOKEN}} -t pr_test .github/actions/cat-facts/
+      #     docker image rm pr_test
+      #   env:
+      #     firstGreeting: ${{env.GITTOKEN}}
+      #     GITTOKEN: ${{env.GITTOKEN}}
 
       # - name: create-issue
       #   uses: ./.github/actions/issue-maker
