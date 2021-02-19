@@ -13,10 +13,11 @@ RUN echo "Commit ID: ${GITHUB_SHA}"
 RUN echo "INPUT_GITTOKEN: ${GITTOKEN}"
 RUN echo "INPUT_GITTOKEN: $GITTOKEN"
 RUN echo "INPUT_GITTOKEN: ${INPUT_FIRSTGREETING}"
-RUN chmod +x entrypoint.sh
-RUN ./entrypoint.sh
-RUN pwd
+
+RUN cp ./entrypoint.sh /github/workspace/
+RUN chmod +x /github/workspace/entrypoint.sh
+RUN /github/workspace/entrypoint.sh
 
 WORKDIR /
 # CMD [ "python", "/src/main.py" ]
-CMD [ "pwd" ]
+CMD [ "ls -a" ]
